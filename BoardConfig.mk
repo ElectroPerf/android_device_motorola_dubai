@@ -25,6 +25,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 # Biometrics
 TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.dubai
+SOONG_CONFIG_qtidisplay_udfps := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := dubai
