@@ -18,18 +18,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResCommon_Sys \
+    CarrierConfigResCommon \
+    CellBroadcastReceiverResCommon \
+    FrameworksResCommon \
     FrameworksResDubai \
-    CarrierConfigResCommon_Sys \
-    CellBroadcastReceiverResCommon_Sys \
     LineageSystemUIDubai \
+    MotoCommonOverlay \
     SettingsProviderResDubai \
     SettingsResDubai \
-    SystemUIResCommon_Sys \
+    SystemUIResCommon \
     SystemUIResDubai \
-    TelecommResCommon_Sys \
-    TelephonyResCommon_Sys \
-    WifiResCommon_Sys \
+    TelecommResCommon \
+    TelephonyResCommon \
+    WifiResCommon \
     FrameworksResTarget \
     WifiResTarget
 
@@ -289,8 +290,7 @@ PRODUCT_PACKAGES += \
 
 # Moto hardware
 PRODUCT_PACKAGES += \
-    MotoActions \
-    MotoCommonOverlay
+    MotoActions
 
 # NFC
 PRODUCT_PACKAGES += \
