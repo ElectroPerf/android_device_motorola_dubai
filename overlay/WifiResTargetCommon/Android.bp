@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "WifiResTargetCommon",
+    product_specific: true,
+}

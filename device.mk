@@ -16,24 +16,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
-# Overlays
-PRODUCT_PACKAGES += \
-    CarrierConfigResCommon \
-    CellBroadcastReceiverResCommon \
-    FrameworksResCommon \
-    FrameworksResDubai \
-    LineageSystemUIDubai \
-    MotoCommonOverlay \
-    SettingsProviderResDubai \
-    SettingsResDubai \
-    SystemUIResCommon \
-    SystemUIResDubai \
-    TelecommResCommon \
-    TelephonyResCommon \
-    WifiResCommon \
-    FrameworksResTarget \
-    WifiResTarget
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
@@ -326,6 +308,23 @@ PRODUCT_PACKAGES += \
     libOmxG711Enc \
     libOmxQcelp13Enc \
     libstagefrighthw
+
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    CellBroadcastReceiverResCommon \
+    FrameworksResCommon \
+    FrameworksResDubai \
+    SettingsResDubai \
+    SettingsProviderResDubai \
+    SystemUIResCommon \
+    SystemUIResDubai \
+    TelecommResCommon \
+    TelephonyResCommon \
+    WifiResTargetCommon \
+    WifiResTargetDubai
 
 # Perf
 PRODUCT_PACKAGES += \
